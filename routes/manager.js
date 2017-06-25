@@ -8,17 +8,32 @@ const authenticationController = require('../modules/authenticationController')
 router.post('/insertUser',authenticationController.checkAuthentication,function(req,res){
 
   if(req.decode._doc._role == "manager"){
-    //function for inserting user
-    user.insertUser(req.body,function(err,insertedUser){
-    if(err){
-//sending error if any
-      res.send({error:err})
-    }
-    else{
-      //sending the credentials of inserted user
-      res.send({status:'user inserted',credetials:insertedUser})
-    }
-  })
+    //function for validating user
+    user.getUser(req.body,function(err,user){
+      if(err){
+        res.send("error invalidation")
+      }
+      else{
+        if(user.length != 0)
+        {
+          res.send("username already in use")
+        }
+        else{
+          //function for inserting user
+          user.insertUser(req.body,function(err,insertedUser){
+          if(err){
+      //sending error if any
+            res.send({error:err})
+          }
+          else{
+            //sending the credentials of inserted user
+            res.send({status:'user inserted',credetials:insertedUser})
+            }
+          })
+        }
+      }
+    })
+
 }
 else{
   res.send("You are not manager")
