@@ -1,6 +1,6 @@
 # employee-system
-Documentation
-Introduction
+##Documentation
+####Introduction
 This project has the rest apis for seeing and creating leaves for employees and
 seeing all the leaves and approving leaves by manager.
 Rest Apis
