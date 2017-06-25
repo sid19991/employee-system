@@ -1,10 +1,10 @@
 # employee-system
-##Documentation
-####Introduction
+## Documentation
+#### Introduction
 This project has the rest apis for seeing and creating leaves for employees and
 seeing all the leaves and approving leaves by manager.
-Rest Apis
-1) Url:https://hidden-mountain-34085.herokuapp.com/login
+## Rest Apis
+1) **Url**:(https://hidden-mountain-34085.herokuapp.com/login)
 Method:Post
 description:logs the user in by providing access token which is used to detect
 authentication and retrieve user information by decoding.
@@ -50,7 +50,7 @@ Method:Post
 Description:Lets manager insert new user
 Headers:Headers contain manager access token
 Sample Request object (in JSON format)
-[
+'[
   {
     "key":"username",
     "value":"test3",
@@ -81,5 +81,5 @@ Sample Request object (in JSON format)
     "value":"employee",
     "description":""
   }
-]
+]'
 Response:Response contains the creadentials of newly inserted user.
