@@ -51,7 +51,7 @@ There is no data in request as this a get request
 - Description:Lets manager insert new user
 - Headers:Headers contain manager access token
 - Sample Request object (in JSON format)
-[
+'''[
   {
     "key":"username",
     "value":"test3",
@@ -82,5 +82,5 @@ There is no data in request as this a get request
     "value":"employee",
     "description":""
   }
-]
+]'''
 - Response:Response contains the creadentials of newly inserted user.
