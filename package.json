@@ -1,10 +1,13 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
+  "name": "ems",
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
-    "start": "nodejs ./bin/www",
+    "start": "node ./bin/www",
     "dev": "webpack-dev-server --port 9966 --hot"
+  },
+  "engines":{
+    "node":"8.0.0"
   },
   "dependencies": {
     "axios": "^0.16.2",
