@@ -9,12 +9,12 @@ router.post('/insertUser',authenticationController.checkAuthentication,function(
 
   if(req.decode._doc.role == "manager"){
     //function for validating user
-    user.getUser(req.body,function(err,user){
+    user.getUser(req.body,function(err,user1){
       if(err){
         res.send("error invalidation")
       }
       else{
-        if(user.length != 0)
+        if(user1.length != 0)
         {
           res.send("username already in use")
         }
