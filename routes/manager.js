@@ -7,7 +7,7 @@ const authenticationController = require('../modules/authenticationController')
 //route for inserting user if the logged in user in a manager
 router.post('/insertUser',authenticationController.checkAuthentication,function(req,res){
 
-  if(req.decode._doc._role == "manager"){
+  if(req.decode._doc.role == "manager"){
     //function for validating user
     user.getUser(req.body,function(err,user){
       if(err){
