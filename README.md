@@ -1,5 +1,4 @@
 # employee-system
-https://www.getpostman.com/collections/facc2a4ed2f8aeb63e6c
 Documentation
 Introduction
 This project has the rest apis for seeing and creating leaves for employees and
